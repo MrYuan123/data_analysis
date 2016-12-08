@@ -1,22 +1,19 @@
 # -*-coding:utf-8 -*-
 import csv
 
-csvfile=file('library.csv', 'rb')
+csvfile=file('clean_data.csv', 'rb')
 reader = csv.reader(csvfile)
-
-st=[]
-
+total=0
 for line in reader:
-    m=()
-    dataT=(line[0],line[1])
-    st.append(dataT)
-
+    total+=1
+    print "%s : %s\n"%(line[0],line[1])
+print total
 csvfile.close()
 
-csvfile = file('clean_data.csv', 'a')
-writer = csv.writer(csvfile)
-
-writer.writerows(st)
-
-csvfile.close()
-print "success!"
+# csvfile = file('clean_data.csv', 'a')
+# writer = csv.writer(csvfile)
+#
+# writer.writerows(st)
+#
+# csvfile.close()
+# print "success!"
