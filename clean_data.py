@@ -1,12 +1,12 @@
 # -*-coding:utf-8 -*-
 import csv
 
-csvfile=file('clean_data.csv', 'rb')
+csvfile=file('dataS.csv', 'rb')
 reader = csv.reader(csvfile)
 total=0
 for line in reader:
     total+=1
-    print "%s : %s\n"%(line[0],line[1])
+    print line
 print total
 csvfile.close()
 
