@@ -1,6 +1,5 @@
 # -*-coding:utf-8 -*-
 import csv
-
 #代码说明：
 #    此段代码用于将存储在文件中的数据转换成字典的形式，在字典中存储学生借阅的对应图书;
 #为了便于计算相似程度，因此采取set()的形式存储;
@@ -11,6 +10,7 @@ class data_standard(object):
     def __init__(self):
         pass
 
+    #用户名为key
     def user_standard(self):
         userMode=dict()
         csvfile = file('clean_data.csv', 'rb')
@@ -34,7 +34,7 @@ class data_standard(object):
         return userMode
 
 
-
+    #书名为key
     def book_standard(self):
         bookMode = dict()
         csvfile = file('clean_data.csv', 'rb')
@@ -57,6 +57,3 @@ class data_standard(object):
         #     print "\n"
 
         return bookMode
-
-s=data_standard()
-s.user_standard()
