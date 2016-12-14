@@ -1,5 +1,6 @@
 # -*-coding:utf-8 -*-
-from Data_analysis import handle_data
+#from Data_analysis \
+import handle_data
 class MostPopular(object):
     def __init__(self):
         self.Handle=handle_data.data_standard()
